@@ -41,7 +41,7 @@ sudo apt-get update
 
 **6. Install Docker Engine, containerd, and Docker Compose.:**
 ```shell
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
 ```
 
 **7. Verify that the Docker Engine installation is successful by running the hello-world image.:**
