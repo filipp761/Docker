@@ -1,23 +1,36 @@
-# Создаем контейнер с PostgreSQL с помощью Docker-compose
-
-# Файл docker-compose.yaml
-
-```yml
+  GNU nano 6.2                         docker-compose.yaml
 # Use postgres/example user/password credentials
 version: '3.1'
 
+networks:
+  db_net:
+    driver: bridge
+
+volumes:
+    postgres_15_4_db: {}
+    postgres_15_4_backup: {}
+
 services:
 
-  db:
-    image: postgres
+  postgres:
+    image: postgres:13
+    container_name: postgres_15_4
+    volumes:
+      - postgres_15_4_db:/var/lib/postgresql/data
+      - postgres_15_4_backup:/var/lib/postgresql/backup
     restart: always
     environment:
-      POSTGRES_PASSWORD: cisco777!
+      - POSTGRES_PASSWORD=cisco777!
+    networks:
+      - db_net
+    ports:
+      - 5432:5432
 
   adminer:
     image: adminer
+    container_name: adminer
     restart: always
+    networks:
+      - db_net
     ports:
       - 8080:8080
-
-```
