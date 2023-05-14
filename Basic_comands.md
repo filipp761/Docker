@@ -27,4 +27,7 @@ docker stop имя_контейнера или id_контейнера
 docker restart имя_контейнера или id_контейнера
 ```
 
-
+* **Удалить образ**
+```
+docker rmi Image Image
+```
