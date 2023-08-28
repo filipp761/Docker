@@ -9,7 +9,10 @@ docker login
 ```
 docker pull имя_контейнера
 ```
-
+* **Создание контейнера**
+```
+docker run --name nginx -d nginx
+```
 * **Создание контейнера**
 ```
 docker run имя_контейнера или id_контейнера
