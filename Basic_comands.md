@@ -53,3 +53,8 @@ docker container prune
 ```
 docker rmi Image Image
 ```
+
+* **Запуск процессов в контейнере**
+```
+docker exec -it имя_id_контйнера bash
+```
