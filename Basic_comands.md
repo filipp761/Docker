@@ -44,6 +44,10 @@ docker restart имя_контейнера или id_контейнера
 ```
 docker rm имя_контейнера или id_контейнера
 ```
+* **Удалить все контейнеры**
+```
+docker container prune
+```
 * **Удалить образ**
 ```
 docker rmi Image Image
